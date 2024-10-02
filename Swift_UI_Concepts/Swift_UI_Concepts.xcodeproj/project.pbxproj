@@ -16,6 +16,9 @@
 		4B3ED2F52CA159E100BB16AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3ED2F32CA159E100BB16AF /* LaunchScreen.storyboard */; };
 		4B3ED3002CA159E100BB16AF /* Swift_UI_ConceptsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED2FF2CA159E100BB16AF /* Swift_UI_ConceptsTests.swift */; };
 		4B3ED30B2CA159E100BB16AF /* Swift_UI_ConceptsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED30A2CA159E100BB16AF /* Swift_UI_ConceptsUITests.swift */; };
+		4B3ED3192CA16BF300BB16AF /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED3182CA16BF300BB16AF /* UsersModel.swift */; };
+		4B3ED31B2CA16C0E00BB16AF /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3ED31A2CA16C0E00BB16AF /* UsersViewModel.swift */; };
+		4B6423A82CA18BC400C4D9D5 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6423A72CA18BC400C4D9D5 /* CustomActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		4B3ED3062CA159E100BB16AF /* Swift_UI_ConceptsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift_UI_ConceptsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3ED30A2CA159E100BB16AF /* Swift_UI_ConceptsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_UI_ConceptsUITests.swift; sourceTree = "<group>"; };
 		4B3ED30C2CA159E200BB16AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B3ED3182CA16BF300BB16AF /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		4B3ED31A2CA16C0E00BB16AF /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		4B6423A72CA18BC400C4D9D5 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +107,9 @@
 		4B3ED2E42CA159DE00BB16AF /* Swift_UI_Concepts */ = {
 			isa = PBXGroup;
 			children = (
-				4B3ED2E52CA159DE00BB16AF /* AppDelegate.swift */,
-				4B3ED2E72CA159DE00BB16AF /* SceneDelegate.swift */,
-				4B3ED2EC2CA159DE00BB16AF /* ContentView.swift */,
+				4BF956E92CAD61AF007470CD /* FetchUsersAPICall */,
+				4BF956E82CAD6196007470CD /* AppDelegates */,
+				4BF956E32CAD6146007470CD /* FetchIPAddress */,
 				4B3ED2EE2CA159E100BB16AF /* Assets.xcassets */,
 				4B3ED2F32CA159E100BB16AF /* LaunchScreen.storyboard */,
 				4B3ED2F62CA159E100BB16AF /* Info.plist */,
@@ -137,6 +143,65 @@
 				4B3ED30C2CA159E200BB16AF /* Info.plist */,
 			);
 			path = Swift_UI_ConceptsUITests;
+			sourceTree = "<group>";
+		};
+		4BF956E32CAD6146007470CD /* FetchIPAddress */ = {
+			isa = PBXGroup;
+			children = (
+				4BF956E72CAD618A007470CD /* View */,
+				4BF956E62CAD617A007470CD /* Model */,
+				4BF956E52CAD6166007470CD /* CustomUI */,
+				4BF956E42CAD615B007470CD /* ViewModel */,
+			);
+			path = FetchIPAddress;
+			sourceTree = "<group>";
+		};
+		4BF956E42CAD615B007470CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B3ED31A2CA16C0E00BB16AF /* UsersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BF956E52CAD6166007470CD /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				4B6423A72CA18BC400C4D9D5 /* CustomActivityIndicator.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		4BF956E62CAD617A007470CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B3ED3182CA16BF300BB16AF /* UsersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BF956E72CAD618A007470CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B3ED2EC2CA159DE00BB16AF /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BF956E82CAD6196007470CD /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				4B3ED2E72CA159DE00BB16AF /* SceneDelegate.swift */,
+				4B3ED2E52CA159DE00BB16AF /* AppDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		4BF956E92CAD61AF007470CD /* FetchUsersAPICall */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FetchUsersAPICall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,9 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3ED2E62CA159DE00BB16AF /* AppDelegate.swift in Sources */,
+				4B3ED31B2CA16C0E00BB16AF /* UsersViewModel.swift in Sources */,
 				4B3ED2EB2CA159DE00BB16AF /* Swift_UI_Concepts.xcdatamodeld in Sources */,
 				4B3ED2ED2CA159DE00BB16AF /* ContentView.swift in Sources */,
+				4B3ED3192CA16BF300BB16AF /* UsersModel.swift in Sources */,
 				4B3ED2E82CA159DE00BB16AF /* SceneDelegate.swift in Sources */,
+				4B6423A82CA18BC400C4D9D5 /* CustomActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
